@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "webapp"
+version = "0.1.1"
+description = "Flask app served with Gunicorn"
+authors = ["Max Bigras <mbigras22@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+flask = "^1.1.1"
+gunicorn = "^20.0.4"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
