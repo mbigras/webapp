@@ -1,4 +1,4 @@
-version=$$(awk '/version/ { gsub("\"", ""); print $$3 }' pyproject.toml)
+version=$$(awk '/version/ { gsub("\"", ""); print $$3 }' app/pyproject.toml)
 build:
 	sudo docker build --tag=mbigras/webapp:latest .
 	sudo docker tag mbigras/webapp mbigras/webapp:$(version)
