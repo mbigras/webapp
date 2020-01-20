@@ -14,4 +14,5 @@ ENV PORT=5000
 CMD exec /venv/bin/gunicorn \
 	--bind=0.0.0.0:$PORT \
 	--workers=3 \
+	--worker-tmp-dir=/dev/shm \
 	app:app
