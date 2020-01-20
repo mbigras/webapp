@@ -2,6 +2,7 @@ FROM python:3.7 as builder
 WORKDIR /app
 RUN pip install poetry
 RUN python -m venv /venv
+RUN /venv/bin/pip install --upgrade pip
 COPY app/pyproject.toml app/poetry.lock ./
 RUN poetry export --format=requirements.txt | /venv/bin/pip install -r /dev/stdin
 
